@@ -1,11 +1,26 @@
-.mainDiv{
-    width: 600px;
+body{
     height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainDiv{
+    width: 480px;
+    height: 480px;
     border: 2px solid blueviolet;
 }
-div{
-    width: 100px;
-    height: 100px;
+.gridDiv{
+    width: 30px;
+    height: 30px;
     outline: 1px solid palevioletred;
+    transition: all .07s ease;
     float: left;
 }
+
+.hovering {
+    /*transform: scale(1.5);*/
+    border-color: rgb(165, 37, 79);
+    box-shadow: 0 0 1rem #d336a4;
+    background: yellow;
+    color: purple;
+  }
