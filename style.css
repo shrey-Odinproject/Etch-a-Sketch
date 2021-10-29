@@ -1,18 +1,24 @@
 body{
-    height: 600px;
+    height: 720px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:20px
+    gap:20px;
+    flex-flow: column-reverse;
+    background: navy;
+    
 }
-.mainDiv{
-    width: 480px;
-    height: 480px;
+.mainDiv{ 
+    /* setted in js file
+    width: 500px;
+    height: 500px;*/
     border: 2px solid blueviolet;
-}
+} /* 16 by 16 and 1 div is 30 px so main div = 16 into 30  
+but we want to change this 30by30 and keep maindiv constant so [main dive size /16 by 16 grid]*/
 .gridDiv{
+    /* set in js file
     width: 30px;
-    height: 30px;
+    height: 30px;*/
     outline: 1px solid palevioletred;
     transition: all .07s ease;
     float: left;
