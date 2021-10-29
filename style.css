@@ -3,6 +3,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap:20px
 }
 .mainDiv{
     width: 480px;
@@ -24,3 +25,11 @@ body{
     background: yellow;
     color: purple;
   }
+button{
+    background: yellow;
+    color: purple;
+    box-shadow: 0 0 1rem #d336a4;
+    border-color:yellow ;
+    font-size: xx-large;
+    font-style: italic;
+}
