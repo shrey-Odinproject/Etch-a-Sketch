@@ -1,0 +1,11 @@
+.mainDiv{
+    width: 600px;
+    height: 600px;
+    border: 2px solid blueviolet;
+}
+div{
+    width: 100px;
+    height: 100px;
+    outline: 1px solid palevioletred;
+    float: left;
+}
