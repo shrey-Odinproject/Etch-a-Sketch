@@ -1,0 +1,47 @@
+body{
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    flex-flow: column-reverse;
+    background: navy;
+}
+.mainDiv{
+    border: 2px solid yellow;
+    display: grid;
+    
+}
+
+.gridDiv{
+    outline: 1px solid palevioletred;
+    background: aquamarine;
+}
+.hovering {
+    /*transform: scale(1.5);*/
+    border-color: rgb(165, 37, 79);
+    box-shadow: 0 0 1rem #d336a4;
+    background: yellow;
+    color: purple;
+  }
+.buttondiv{
+    background: antiquewhite;
+    display: flex;
+}
+button{
+    background: yellow;
+    color: purple;
+    box-shadow: 0 0 1rem #d336a4;
+    border-color:yellow ;
+    font-size: xx-large;
+    font-style: italic;
+    padding: 3px;
+    transition: 0.07s ease;
+}
+.hoveringbtn {
+    transform: scale(1.5);
+    border-color: rgb(165, 37, 79);
+    box-shadow: 0 0 1rem #d336a4;
+    background: purple;
+    color: yellow;
+  }
