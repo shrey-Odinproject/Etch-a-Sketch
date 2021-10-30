@@ -38,4 +38,17 @@ button{
     border-color:yellow ;
     font-size: xx-large;
     font-style: italic;
+    padding: 3px;
+    transition: 0.07s;
+}
+.hoveringbtn {
+    transform: scale(1.5);
+    border-color: rgb(165, 37, 79);
+    box-shadow: 0 0 1rem #d336a4;
+    background: purple;
+    color: yellow;
+  }
+.buttondiv{
+    display: flex;
+justify-content: space-around;
 }
