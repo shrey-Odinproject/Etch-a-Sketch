@@ -18,7 +18,7 @@ body{
     background: aquamarine;
 }
 .hovering {
-    /*transform: scale(1.5);*/
+    /*this is for grid divs*/
     border-color: rgb(165, 37, 79);
     box-shadow: 0 0 1rem #d336a4;
     background: yellow;
@@ -27,6 +27,7 @@ body{
 .buttondiv{
     background: antiquewhite;
     display: flex;
+    justify-content: space-evenly;
 }
 button{
     background: yellow;
@@ -39,7 +40,7 @@ button{
     transition: 0.07s ease;
 }
 .hoveringbtn {
-    transform: scale(1.5);
+    transform: scale(1.3);
     border-color: rgb(165, 37, 79);
     box-shadow: 0 0 1rem #d336a4;
     background: purple;
