@@ -25,7 +25,7 @@ body{
     color: purple;
   }
 .buttondiv{
-    background: antiquewhite;
+    
     display: flex;
     justify-content: space-evenly;
 }
