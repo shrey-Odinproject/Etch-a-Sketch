@@ -14,7 +14,7 @@ body{
 }
 
 .gridDiv{
-    outline: 1px solid palevioletred;
+    /*outline: 1px solid palevioletred;*/
     background: aquamarine;
 }
 .hovering {

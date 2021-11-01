@@ -6,6 +6,7 @@ let rgb = false
 
 const mainDivDimensions = '500px'
 let gridDimension; // stores the dimension of grid eg 10 ,4 (translates to 10x10 4x4)
+
 do {
     gridDimension = parseInt(prompt('entr dimension from 2 to 100'));
 } // asks the dimension of grid to user}
@@ -50,9 +51,9 @@ allButtons.forEach(button => {// common action for all buttons
     button.addEventListener('mouseout', (e) => e.target.classList.remove('hoveringbtn'))
 
 })
+
 // below are button specific action
 
-// the reset acctions are a bit messy
 reset.addEventListener('click', () => {
     gridDivNodeList.forEach(divElm => divElm.classList.remove('hovering'))// resets all divs by removing class
     gridDivNodeList.forEach(divElm => divElm.removeAttribute('style'))// removing style
@@ -81,36 +82,32 @@ function getRandomColor() {
     }
     return color;
 }// RETURNS A RANDOM COLOR
-function addHoveringClass(e) { e.target.classList.add('hovering') }
-function addRGBStyle(e) { e.target.setAttribute('style', `background:${getRandomColor()}`) }
+
+// both 'add' function dictate what happens to the target div
+function addHoveringClass(e) { 
+    e.target.classList.add('hovering')
+    e.target.removeAttribute('style')
+}
+function addRGBStyle(e) {
+    e.target.setAttribute('style', `background:${getRandomColor()}`)
+    e.target.classList.remove('hovering')
+}
 
 function effectOnGridDivNormal() {
 
     gridDivNodeList.forEach(divElm => { // what will happen to each div element
-        //if (rgb == false) {
-
-        //divElm.removeAttribute('style')
-
-        divElm.addEventListener('mouseover', addHoveringClass)
-        divElm.removeEventListener('mouseover',addRGBStyle)
-        //}
-        /*else {
-            
-                divElm.classList.remove('hovering')
-            
-            divElm.addEventListener('mouseover', (e) => e.target.setAttribute('style', `background:${getRandomColor()}`))
-        }*/
-        // changing div color using js
+        divElm.removeEventListener('mouseover', addRGBStyle)
+        divElm.addEventListener('mouseover', addHoveringClass)// we remove one eventlistener when other is active
     })
 
 }
 function effectOnGridDivRGB() {
     gridDivNodeList.forEach(divElm => {
+
+        divElm.removeEventListener('mouseover', addHoveringClass)
         divElm.addEventListener('mouseover', addRGBStyle)
-        divElm.removeEventListener('mouseover',addHoveringClass)
+
     })
 }
 effectOnGridDivNormal()
 
-// IMPLEMENTING CHANGING rgb VALUE VIA BUTTON CLICK AND UPDATING THE GRID ON BUTTON CLICK IS LEFT 
-// PROGRAMMS WORKS IF WE MANUALLLY CHANGE rgb I NOW HAVE TO INCORPORATE BUTTON AND DYNAMICALLY switching modes
